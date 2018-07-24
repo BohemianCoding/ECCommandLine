@@ -7,7 +7,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-@interface ExampleToolTests : ECTestCase
+@interface ExampleToolTests : BCTestCase
 
 @end
 
@@ -32,28 +32,28 @@
 - (void)testHelp {
 	NSURL* expectedURL = [self URLForTestResource:@"Help" withExtension:@"txt"];
 	NSString* output = [self runToolWithArguments:nil];
-	[self assertString:output matchesContentsOfURL:expectedURL mode:ECTestComparisonDiff];
+	[self assertString:output matchesContentsOfURL:expectedURL mode:BCTestComparisonDiff];
 }
 
 - (void)testExample {
 	NSString* output = [self runToolWithArguments:@[@"example", @"argument"]];
-	[self assertString:output matchesString:@"This is an example command. It's not very useful. The argument was “argument”. The parameter was “waffle”" mode:ECTestComparisonDiff];
+	[self assertString:output matchesString:@"This is an example command. It's not very useful. The argument was “argument”. The parameter was “waffle”" mode:BCTestComparisonDiff];
 }
 
 - (void)testExampleNoArgument {
 	NSString* output = [self runToolWithArguments:@[@"example"]];
-	[self assertString:output matchesString:@"We were expecting an argument." mode:ECTestComparisonDiff];
+	[self assertString:output matchesString:@"We were expecting an argument." mode:BCTestComparisonDiff];
 }
 
 - (void)testExampleWithOption {
 	NSString* output = [self runToolWithArguments:@[@"example", @"argument", @"--blah=doodah"]];
-	[self assertString:output matchesString:@"This is an example command. It's not very useful. The argument was “argument”. The parameter was “doodah”" mode:ECTestComparisonDiff];
+	[self assertString:output matchesString:@"This is an example command. It's not very useful. The argument was “argument”. The parameter was “doodah”" mode:BCTestComparisonDiff];
 }
 
 - (void)testUnknown {
 	NSString* output = [self runToolWithArguments:@[@"zoinks"]];
 	NSString* line1 = [output componentsSeparatedByString:@"\n"][0];
-	[self assertString:line1 matchesString:@"Unknown command ‘zoinks’" mode:ECTestComparisonDiff];
+	[self assertString:line1 matchesString:@"Unknown command ‘zoinks’" mode:BCTestComparisonDiff];
 }
 
 @end
