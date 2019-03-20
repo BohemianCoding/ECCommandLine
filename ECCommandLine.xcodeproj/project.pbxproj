@@ -56,6 +56,7 @@
 		22D0BF001AF1744600AE043D /* ECCommandLineExampleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D0BEEF1AF173CE00AE043D /* ECCommandLineExampleCommand.m */; };
 		430E026C21F5ED5600B3E784 /* ECCommandLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22381DE91A6C2FA9000AD60A /* ECCommandLine.framework */; };
 		430E026D21F5ED6800B3E784 /* ECCommandLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22381DE91A6C2FA9000AD60A /* ECCommandLine.framework */; };
+		43299D602241A42700AD4263 /* ECLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43299D5F2241A42700AD4263 /* ECLogging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		22D0BEF21AF173CE00AE043D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D0BEF31AF173CE00AE043D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22D0BEF81AF173DF00AE043D /* ECCommandLineExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECCommandLineExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		43299D5F2241A42700AD4263 /* ECLogging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ECLogging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43299D602241A42700AD4263 /* ECLogging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +200,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43299D5F2241A42700AD4263 /* ECLogging.framework */,
 				225F21FE1F3C72040030878E /* ECLogging.framework */,
 				22C8B76B182D3CB8003EA301 /* IOKit.framework */,
 				22C4FB3E1791C5C000F33FB2 /* Cocoa.framework */,
